@@ -10,22 +10,26 @@
     <% end %>
   </div>
 </div>
-  <div class="form-group">
-    <%= form_for(@message) do |f| %>
-    <label for="exampleInputEmail1">
-      名前
-    </label>
-    <div>
-      <%= f.text_field :name %>
+  <%= form_for(@message, html: {class: "form-horizontal"}) do |f| %>
+    <div class="form-group">
+      <label for="message_name" class="control-label col-md-2">
+        名前
+      </label>
+      <div class="col-md-4">
+        <%= f.text_field :name, :class => "form-control" %>
+      </div>
     </div>
-  </div>
-  <div class="form-group">
-    <label for="exampleInputEmail1">
-      内容
-    </label>
-    <div>
-      <%= f.text_area :body %>
+    <div class="form-group">
+      <label for="message_body" class="col-md-2 control-label">
+        内容
+      </label>
+      <div class="col-md-4">
+        <%= f.text_area :body, :class => "form-control" %>
+      </div>
     </div>
-  </div>
-    <%= f.submit class: "btn btn-sm btn-primary" %>
+    <div crass="form-gorup">
+      <div class="col-md-offset-2 col-sm-10">
+        <%= f.submit class: "btn btn-sm btn-primary" %>
+      </div>
+    </div>
     <% end %>
