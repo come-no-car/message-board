@@ -24,9 +24,9 @@
     <label for="exampleInputEmail1">
       内容
     </label>
-      <textarea class="form-control" rows="3">
-      <%= f.text_field :body %>
-      </textarea>
+    <div>
+      <%= f.text_area :body %>
+    </div>
   </div>
     <%= f.submit class: "btn btn-sm btn-primary" %>
     <% end %>
